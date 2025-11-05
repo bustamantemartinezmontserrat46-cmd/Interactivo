@@ -1,1 +1,1 @@
-· Bienvenido a mi interactivo sobre las plantas 
+Bienvenido a mi interactivo sobre las plantas 
