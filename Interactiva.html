@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Conociendo la planta</title>
+  <link rel="stylesheet" href="confetti.css">
+</head>
+<body style="font-family: Arial; text-align: center; background-color: #eaf7ea;">
+  <style>
+    #header {
+      background-color: #74e651;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .nav {
+      padding-right: 20px;
+    }
+
+    .nav ul li{
+      display:inline;
+      padding:0 10px
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      margin: 8px;
+    }
+    #seccion {
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap
+    }
+
+    .barra {
+      padding: 10px;
+      margin:5px;
+      background: aqua;
+      flex:3;
+      border-radius:10px;
+      display:flex;
+      flex-flow:column;
+      align-items:center;
+    }
+
+    .contenido {
+      padding: 10px;
+      border-radius:10px;
+      background: rgb(251,241,100);
+      margin:5px;
+      flex:1 150px;
+    }
+
+    .subcontenido2 {
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    #resultado {
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      align-items: center;
+    }
+    
+    #footer {
+      background-color: white;
+      height: 100%;
+      text-align: center;
+      padding-top: 10px;
+      border-radius: 10px;
+      display:flex;
+      flex-flow:row;
+    }
+    .pie {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    #galeria{
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap; 
+      height:100px;
+    }
+
+    .proyecto{
+      
+      height:150px;
+      max-width:150px;
+      background-color:rgb(255, 255, 255);
+      border-radius:10px;
+      margin:10px;
+      flex:1 100px;
+    }
+
+    .barra a {
+      display:block;
+    }
+    #imagen-interactiva {
+      position: relative;
+      width: 450px;
+      height: 600px;
+      background-image: url('img/girasol.jpg');
+      background-size: cover;
+      border: 2px solid #000;
+      border-radius: 10px;
+    }
+
+    #hotspot1 {
+      position: absolute;
+      top: 565px;
+      left: 185px;
+      width: 40px;
+      height: 40px;
+      background-color: #0015ff80;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #hotspot2 {
+      position: absolute;
+      top: 465px;
+      left: 185px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 21, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+     #hotspot3 {
+      position: absolute;
+      top: 50px;
+      left: 195px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 21, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+     #hotspot4 {
+      position: absolute;
+      top: 90px;
+      left: 195px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 21, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    #hotspot5 {
+      position: absolute;
+      top: 150px;
+      left: 195px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 21, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .text-hotspot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+    }
+
+    #instrucciones {
+      flex:1;
+      cursor: pointer;
+    }
+
+    #prueba {
+      flex:1;
+      cursor:pointer;
+    }
+
+    .texto-rojo{
+            font-size:40px;
+            font-weight: bold;
+            color:red;
+    }
+    #resultado {
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      align-items: center;
+    }
+  </style>
+<div id="header">
+    <div class="nav" style="text-align:center;">
+      <h3>Bienvenido a "Conociendo la planta"</h3>
+    </div>
+  </div>
+  <div id="seccion">
+    <div class="barra">
+        <div id="imagen-interactiva">
+          <div id="hotspot1"><span class="text-hotspot">1</span></div>
+          <div id="hotspot2"><span class="text-hotspot">2</span></div>
+          <div id="hotspot3"><span class="text-hotspot">3</span></div>
+          <div id="hotspot4"><span class="text-hotspot">4</span></div>
+          <div id="hotspot5"><span class="text-hotspot">5</span></div>
+        </div>
+  
+    
+
+   </div>
+    <div class="contenido">
+      <div class="subcontenido1">
+        <h2 id="titulo-info">Instrucciones</h2>
+        <p id="texto-info">Haz click en cada uno de los puntos de la imagen para ver su descripción. Una vez visualizado el interactivo, realiza el test de conocimientos.</p>
+      </div>
+      <div class="subcontenido2">
+        <div class="proyecto">
+          <img id="imagen-info" src="Img/boton.png" alt="Imagen info" style="width:100%; height:100%; border-radius:10px;">
+        </div>
+      </div>
+      <div id="resultado" class="invisible">
+        <h2>Tu resultado:</h2>
+        <span id="calif" class="texto-rojo">0/0</span>
+        <img id="imagen-resultado" width="200px" src="Img/Gif.gif" />
+      </div>       
+    </div>
+  </div>
+  <div id="footer">
+    <div id="instrucciones"><img width="100px" src="Img/instrucciones.png" /></div>
+    <div id="boton-iniciar" style="width: 200px; height: 50px; background-color: green; color: white; font-weight: bold; text-align: center; line-height: 50px; border-radius: 10px; cursor: pointer; margin-bottom: 20px;">
+    Iniciar Prueba
+</div>
+  </div>
+  
+  <script type="text/javascript">
+    let puntaje = 0;
+    let pregunta1 = "";
+
+    document.getElementById('hotspot1').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Tallo';
+      document.getElementById('texto-info').textContent = 'El tallo transporta el agua y los nutrientes hacia las hojas.';
+      document.getElementById('imagen-info').setAttribute('src' , 'Img/tallo.png')
+    };
+
+    document.getElementById('hotspot2').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Hoja';
+      document.getElementById('texto-info').textContent = 'La hoja realiza la fotosíntesis, convirtiendo la luz solar en alimento.';
+      document.getElementById('imagen-info').setAttribute('src', 'Img/hoja.png');
+    };
+
+    document.getElementById('hotspot3').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Flor';
+      document.getElementById('texto-info').textContent = 'La flor permite la reproducción de la planta.';
+      document.getElementById('imagen-info').setAttribute('src', 'Img/flor.jpg');
+    };
+
+    document.getElementById('hotspot4').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Fruto';
+      document.getElementById('texto-info').textContent = 'El fruto protege las semillas y ayuda a su dispersión.';
+      document.getElementById('imagen-info').setAttribute('src', 'Img/fruto.png');
+    };
+
+    document.getElementById('hotspot5').onclick = function() {
+      document.getElementById('titulo-info').textContent = 'Semilla';
+      document.getElementById('texto-info').textContent = 'La semilla contiene el embrión que dará origen a una nueva planta.';
+      document.getElementById('imagen-info').setAttribute('src', 'Img/semilla.jpg');
+    };
+
+    document.getElementById('instrucciones').onclick = function(){
+      document.getElementById('titulo-info').textContent = 'Instrucciones';
+      document.getElementById('texto-info').textContent = 'Haz click en cada uno de los puntos de la imagen para ver su descripción. Una vez visualizado el interactivo, realiza el test de conocimientos.';
+      document.getElementById('imagen-info').setAttribute('src', 'Img/boton.png');
+    };
+      </script>
+
+   <div id="boton-reintentar" class="invisible">Reintentar</div>
+       
+    
+
+<div id="boton-reintentar" class="invisible" style="width: 150px; height: 50px; background-color: blue; color: white; text-align: center; line-height: 50px; font-size: 20px; font-weight: bold; border-radius: 10px; cursor: pointer; margin-top: 20px;">
+    Reintentar
+</div>
+    <script type="text/javascript">
+        
+         
+        
+            document.getElementById("boton-iniciar").onclick = prueba;
+
+            function prueba(){
+                let puntaje = 0;
+               let pregunta1 = "", pregunta2 = "", pregunta3 = "", pregunta4 = "", pregunta5 = "", 
+        pregunta6 = "", pregunta7 = "", pregunta8 = "", pregunta9 = "", pregunta10 = "";
+        alert("Bienvenidos a la prueba de conocimientos");
+        alert("Responde correctamente todas las preguntas para ganar");
+        alert("Escribe tus respuestas sin mayusculas ni acentos");
+
+        if(pregunta1 = prompt("¿Cuál es la parte que sostiene a la planta?")){
+            pregunta1 = pregunta1.trim();
+            
+        }
+        if (pregunta1.toLowerCase() === "tallo") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:tallo");
+        }
+
+        if(pregunta2 = prompt("¿Cuál es la parte que absorve el agua?")){
+            pregunta2 = pregunta2.trim();
+            
+        }
+        if (pregunta2.toLowerCase() === "raiz") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:raiz");
+        }
+
+        if(pregunta3 = prompt("¿Cuál es la parte de la planta encargada de la fotosíntesis?")){
+            pregunta3 = pregunta3.trim();
+            
+        }
+        if (pregunta3.toLowerCase() === "hoja") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:hoja");
+        }
+
+        if(pregunta4 = prompt("¿Qué parte de la planta permite la reproducción y produce semillas?")){
+            pregunta4 = pregunta4.trim();
+            
+        }
+        if (pregunta4.toLowerCase() === "flor") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:flor");
+        }
+
+        if(pregunta5 = prompt("¿Qué parte protege las semillas y ayuda a su dispersión?")){
+            pregunta5 = pregunta5.trim();
+            
+        }
+        if (pregunta5.toLowerCase() === "fruto") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:fruto");
+        }
+
+        if(pregunta6 = prompt("¿Qué parte de la planta generalmente crece bajo tierra?")){
+            pregunta6 = pregunta6.trim();
+            
+        }
+        if (pregunta6.toLowerCase() === "raiz") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:tallo");
+        }
+
+        if(pregunta7 = prompt("¿Qué parte de la planta suele ser colorida para atraer polinizadores?")){
+            pregunta7 = pregunta7.trim();
+            
+        }
+        if (pregunta7.toLowerCase() === "flor") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:flor");
+        }
+
+        if(pregunta8 = prompt("¿Qué parte de la planta transporta el agua y los nutrientes desde la raíz hasta las hojas?")){
+            pregunta8 = pregunta8.trim();
+            
+        }
+        if (pregunta8.toLowerCase() === "tallo") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:tallo");
+        }
+
+        if(pregunta9 = prompt("¿Qué parte de la planta capta la luz del sol para fabricar su alimento?")){
+            pregunta9 = pregunta9.trim();
+            
+        }
+        if (pregunta9.toLowerCase() === "hoja") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:hoja");
+        }
+
+        if(pregunta10 = prompt("¿Qué contiene el embrión que dará origen a una nueva planta?")){
+            pregunta10 = pregunta10.trim();
+            
+        }
+        if (pregunta10.toLowerCase() === "semilla") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:semilla");
+        }
+
+        if(puntaje >=9) {
+            alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("resultado").setAttribute("class", "visible");
+            
+        } else {
+            alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
+            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("resultado").setAttribute("class", "visible");
+            document.getElementById("imagen-resultado").setAttribute("src", "Img/triste.gif");
+        }
+    }
+        </script>
+</body>
+</html>
