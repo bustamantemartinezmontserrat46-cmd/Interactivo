@@ -103,7 +103,7 @@
       position: relative;
       width: 450px;
       height: 600px;
-      background-image: url('img/girasol.jpg');
+      background-image: url('Img/girasol.jpg');
       background-size: cover;
       border: 2px solid #000;
       border-radius: 10px;
@@ -191,6 +191,13 @@
       flex-wrap:wrap;
       align-items: center;
     }
+    .invisible {
+            opacity: 0;
+        }
+
+        .visible {
+            opacity: 100%;
+        }
   </style>
 <div id="header">
     <div class="nav" style="text-align:center;">
@@ -239,31 +246,31 @@
     let pregunta1 = "";
 
     document.getElementById('hotspot1').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Tallo';
+      document.getElementById('titulo-info').textContent = 'TALLO';
       document.getElementById('texto-info').textContent = 'El tallo transporta el agua y los nutrientes hacia las hojas.';
       document.getElementById('imagen-info').setAttribute('src' , 'Img/tallo.png')
     };
 
     document.getElementById('hotspot2').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Hoja';
+      document.getElementById('titulo-info').textContent = 'HOJA';
       document.getElementById('texto-info').textContent = 'La hoja realiza la fotosíntesis, convirtiendo la luz solar en alimento.';
       document.getElementById('imagen-info').setAttribute('src', 'Img/hoja.png');
     };
 
     document.getElementById('hotspot3').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Flor';
+      document.getElementById('titulo-info').textContent = 'FLOR';
       document.getElementById('texto-info').textContent = 'La flor permite la reproducción de la planta.';
       document.getElementById('imagen-info').setAttribute('src', 'Img/flor.jpg');
     };
 
     document.getElementById('hotspot4').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Fruto';
+      document.getElementById('titulo-info').textContent = 'FRUTO';
       document.getElementById('texto-info').textContent = 'El fruto protege las semillas y ayuda a su dispersión.';
       document.getElementById('imagen-info').setAttribute('src', 'Img/fruto.png');
     };
 
     document.getElementById('hotspot5').onclick = function() {
-      document.getElementById('titulo-info').textContent = 'Semilla';
+      document.getElementById('titulo-info').textContent = 'SEMILLA';
       document.getElementById('texto-info').textContent = 'La semilla contiene el embrión que dará origen a una nueva planta.';
       document.getElementById('imagen-info').setAttribute('src', 'Img/semilla.jpg');
     };
@@ -274,14 +281,8 @@
       document.getElementById('imagen-info').setAttribute('src', 'Img/boton.png');
     };
       </script>
+           
 
-   <div id="boton-reintentar" class="invisible">Reintentar</div>
-       
-    
-
-<div id="boton-reintentar" class="invisible" style="width: 150px; height: 50px; background-color: blue; color: white; text-align: center; line-height: 50px; font-size: 20px; font-weight: bold; border-radius: 10px; cursor: pointer; margin-top: 20px;">
-    Reintentar
-</div>
     <script type="text/javascript">
         
          
