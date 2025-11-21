@@ -459,14 +459,34 @@
             alert("Respuesta correcta:nectar");
         }
 
-        if(puntaje >=12) {
+        if(pregunta14 = prompt("¿Dónde están los gametos masculinos?")){
+            pregunta14 = pregunta14.trim();
+        }
+        if (pregunta14.toLowerCase() === "estambres") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+       } else {
+            alert("Respuesta correcta:estambres");
+       }
+
+       if(pregunta15 = prompt("¿Cómo se llama el proceso de fabricación de alimento en las plantas?")){
+            pregunta15 = pregunta15.trim();
+       }
+       if (pregunta15.toLowerCase() === "fotosíntesis") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+       } else {
+            alert("Respuesta correcta:fotosíntesis");
+            }
+
+        if(puntaje >=15) {
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
-            document.getElementById("calif").textContent = puntaje + "/13";
+            document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             
         } else {
             alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
-            document.getElementById("calif").textContent = puntaje + "/13";
+            document.getElementById("calif").textContent = puntaje + "/15";
             document.getElementById("resultado").setAttribute("class", "visible");
             document.getElementById("imagen-resultado").setAttribute("src", "Img/triste.gif");
             document.getElementById("imagen-resultado").style.width = "200px";
@@ -477,3 +497,4 @@
         </script>
 </body>
 </html>
+
