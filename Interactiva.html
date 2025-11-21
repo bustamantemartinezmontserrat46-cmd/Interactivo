@@ -259,23 +259,6 @@
     Iniciar Prueba
 </div>
   </div>
-  <script type="text/javascript">
-    let puntaje = 0;
-    let respuestas = [];  
-    let respuestasCorrectas = ["tallo", "raiz", "hoja", "flor", "fruto", "raiz", "flor", "tallo", "hoja", "semilla", "semilla", "arreglo", "nectar", "estambres", "fotosíntesis"];
-    
-    function mostrarResumen() {
-      let resumen = "";
-      for (let i = 0; i < 15; i++) {
-        if (respuestas[i].toLowerCase() === respuestasCorrectas[i]) {
-          resumen += `Pregunta ${i+1}: Respuesta correcta\n`;
-        } else {
-          resumen += `Pregunta ${i+1}: Respuesta incorrecta. La respuesta correcta era "${respuestasCorrectas[i]}"\n`;
-        }
-      }
-
-      alert(resumen);
-    }
   
   <script type="text/javascript">
     let puntaje = 0;
@@ -514,5 +497,6 @@
         </script>
 </body>
 </html>
+
 
 
