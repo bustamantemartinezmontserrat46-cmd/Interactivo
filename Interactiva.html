@@ -206,6 +206,16 @@
           filter: brightness(0.5); /* Más oscuro */
           transform: scale(1.1);  /* Más grande */
       }
+      .boton-formulario{
+        display: inline-block;
+        padding: 10px 20px;
+        background: #0055ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
   </style>
 <div id="header">
     <div class="nav" style="text-align:center;">
@@ -239,6 +249,7 @@
         <h2>Tu resultado:</h2>
         <span id="calif" class="texto-rojo">0/0</span>
         <img id="imagen-resultado" width="200px" src="Img/Gif.gif" />
+        <a href="formulario.php" class="boton-formulario">Libro de visitas</a>
       </div>       
     </div>
   </div>
@@ -460,6 +471,7 @@
             document.getElementById("imagen-resultado").setAttribute("src", "Img/triste.gif");
             document.getElementById("imagen-resultado").style.width = "200px";
             document.getElementById("imagen-resultado").style.height = "auto";
+            
         }
     }
         </script>
