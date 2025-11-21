@@ -407,6 +407,39 @@
             alert("Respuesta correcta:semilla");
         }
 
+        if(pregunta11 = prompt("¿Como se llama la plantula en su estado mas antiguo?")){
+            pregunta11 = pregunta11.trim();
+            
+        }
+        if (pregunta11.toLowerCase() === "semilla") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:semilla");
+        }
+
+        if(pregunta12 = prompt("¿que es un conjunto de distintas flores?")){
+            pregunta12 = pregunta12.trim();
+            
+        }
+        if (pregunta12.toLowerCase() === "arreglo") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:arreglo");
+        }
+
+        if(pregunta13 = prompt("¿Qué contiene la parte superior interna de la flor?")){
+            pregunta13 = pregunta13.trim();
+            
+        }
+        if (pregunta13.toLowerCase() === "nectar") {
+            alert("Respuesta correcta");
+            puntaje += 1;
+        } else {
+            alert("Respuesta correcta:nectar");
+        }
+
         if(puntaje >=9) {
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
             document.getElementById("calif").textContent = puntaje + "/10";
