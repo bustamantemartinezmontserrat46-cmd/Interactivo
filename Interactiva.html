@@ -440,14 +440,14 @@
             alert("Respuesta correcta:nectar");
         }
 
-        if(puntaje >=9) {
+        if(puntaje >=12) {
             alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
-            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("calif").textContent = puntaje + "/13";
             document.getElementById("resultado").setAttribute("class", "visible");
             
         } else {
             alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
-            document.getElementById("calif").textContent = puntaje + "/10";
+            document.getElementById("calif").textContent = puntaje + "/13";
             document.getElementById("resultado").setAttribute("class", "visible");
             document.getElementById("imagen-resultado").setAttribute("src", "Img/triste.gif");
             document.getElementById("imagen-resultado").style.width = "200px";
