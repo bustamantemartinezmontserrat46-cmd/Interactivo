@@ -26,7 +26,7 @@
             <p>Nombre: <?php echo $nombre_post;?> </p>
             <p>Apellidos: <?php echo $apellidos_post;?> </p>
             <p>Edad: <?php echo $edad_post;?> </p>
-            <a href="conectar_mysql.php" target="_self">Ir a listado</a>
+            <a href="listado.php" target="_self">Ir a listado</a>
             <a href="Interactiva.html" target="_self">Ir a interactivo</a>
     </body>
 </html>
